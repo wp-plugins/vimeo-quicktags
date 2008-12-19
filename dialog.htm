@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<head>
+  <title>Vimeo TinyMCE Plugin</title>
+  <script type="text/javascript" src="../../../wp-includes/js/tinymce/tiny_mce_popup.js"></script>
+  <script type="text/javascript" src="js/dialog.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Georgia, Times New Roman, Times, serif;
+	font-size: 12px;
+}
+-->
+</style>
+</head>
+<body>
+<form onsubmit="VimeoDialog.insert();return false;" action="#">
+<table width="249">
+  <tr>
+    <td height="38" colspan="2"><h2>Insert Vimeo Video </h2></td>
+  </tr>
+  <tr>
+    <td height="17" colspan="2">Enter Video ID here</td>
+  </tr>
+  <tr>
+    <td height="15" colspan="2"> http://vimeo.com/
+    <input id="vimeoID" name="vimeoID" type="text" class="text" size="10" value="" /></td>
+  </tr>
+  <tr>
+    <td height="45"> Width<br />      <input id="vimeoWidth" name="vimeoWidth" type="text" class="text" size="5" value="400" />       </td>
+    <td height="45">Height
+      <br />
+      <input id="vimeoHeight" name="vimeoHeight" type="text" class="text" size="5" value="302" /></td>
+  </tr>
+  <tr>
+    <td width="127" height="26">Show Portrait? </td>
+    <td width="110" height="26"> <select name="vimeoPortrait" class="selectfont">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td height="26"> Show Byline?</td>
+    <td height="26"><select name="vimeoByline" class="selectfont">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+  </select></td>
+  </tr>
+  <tr>
+    <td height="26"> Show Title?</td>
+    <td height="26"><select name="vimeoTitle" class="selectfont">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td height="26"> Select colour</td>
+    <td height="26"><select name="vimeoColor" class="selectfont">
+      <option value="00adef">Blue</option>
+      <option value="ff9933">Orange</option>
+      <option value="c9ff23">Lime</option>
+      <option value="ff0179">Fuscia</option>
+  </select></td>
+  </tr>
+  <tr>
+    <td height="26"><input type="button" id="insert" name="insert" value="{#insert}" onClick="VimeoDialog.insert();"  /></td>
+    <td height="26"><input type="button" id="cancel" name="cancel" value="{#cancel}" onClick="tinyMCEPopup.close();"  /></td>
+  </tr>
+  <tr>
+    <td height="30" colspan="2">created by : <a href="http://denzeldesigns.com" target="_blank">Denzel Designs</a></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
