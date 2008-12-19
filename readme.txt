@@ -19,8 +19,3 @@ Enable administrator to embed vimeo video into blog. Options available are the s
 == Screenshots ==
 
 
-
-== Arbitrary section ==
-
-
-== A brief Markdown Example ==
