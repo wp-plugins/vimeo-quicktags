@@ -1,6 +1,6 @@
 === vimeo quicktag ===
 Contributors: denzel chia
-Tags: vimeo, quicktag
+Tags:vimeo-quicktag, vimeo, quicktag, embed video, embed vimeo video
 Tested up to: 2.7
 
 == Description ==
