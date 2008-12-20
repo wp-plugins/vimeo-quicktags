@@ -1,7 +1,10 @@
 === vimeo quicktag ===
 Contributors: denzel chia
+Donate link: http://denzeldesigns.com/2008/12/vimeo-quicktags/
 Tags:vimeo-quicktag, vimeo, quicktag, embed video, embed vimeo video
+Requires at least:2.6
 Tested up to: 2.7
+Stable tag:trunk
 
 == Description ==
 
@@ -17,5 +20,7 @@ Enable administrator to embed vimeo video into blog. Options available are the s
 
 
 == Screenshots ==
+
+1. Vimeo Quicktag dialog window
 
 
