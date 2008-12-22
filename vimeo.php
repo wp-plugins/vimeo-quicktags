@@ -2,7 +2,7 @@
 /*
 Plugin Name: Vimeo Quicktags
 Plugin URI: http://denzeldesigns.com
-Version: 1.0
+Version: 1.1
 Description: insert vimeo quicktag with full embed options as provided by vimeo
 Author: Denzel Chia
 Author URI: http://denzeldesigns.com
@@ -27,15 +27,14 @@ function register_myplugin_button($buttons) {
 
 // determine absolute url path of editor_plugin.js
 function url($type) {
-	// Get plugins location, can be either installed in the wp-content/plugins/<pluginname> folder or in the plugin folder of tinymce.
-	if (file_exists(ABSPATH . "wp-includes/js/tinymce/plugins/". $type ."/editor_plugin.js")) {
-		return "../../../wp-includes/js/tinymce/plugins/". $type ."/editor_plugin.js";
-	} else if (file_exists(ABSPATH . "wp-content/plugins/". $type ."/editor_plugin.js")) {
+
+	if (file_exists(ABSPATH . "wp-content/plugins/". $type ."/editor_plugin.js")) {
 		return "../../../wp-content/plugins/". $type ."/editor_plugin.js";
-	}
+	
+	}else{
 
 	// Return false if we cant find them
-	return false;
+	return false;}
 }
 
 // Load the TinyMCE plugin : editor_plugin.js (wp2.5)
