@@ -17,6 +17,7 @@ Enable administrator to embed vimeo video into blog. Options available are the s
 
 1. Upload `vimeo quicktag` to the `/wp-content/plugins/` directory and unzip
 2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Click refresh if vimeo quicktag does not show after activation.
 
 
 == Screenshots ==
