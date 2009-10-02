@@ -15,7 +15,8 @@ Enable administrator to embed vimeo video into blog. Options available are the s
 =1.2=
 
 *Changed plugin path to defined WP_PLUGINS_URL
-*No changes in features.
+
+*Added White Colour.
 
 == Installation ==
 
