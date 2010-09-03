@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Vimeo TinyMCE Plugin</title>
+<script type="text/javascript" src="../../../wp-includes/js/tinymce/tiny_mce_popup.js"></script>
+<script type="text/javascript" src="js/dialog.js"></script>
+<script type="text/javascript">
+function preview_video(){
+var video_id = document.getElementById('vimeoID').value;
+
+if(video_id==''){
+document.getElementById('preview').innerHTML = "<div style='color:#000000;position:relative;top:10px;left:10px;'>Please enter a video id</div>";return false;
+}else{
+document.getElementById('preview').innerHTML = "<div style='color:#000000;position:relative;top:10px;left:10px;'>Loading...Please Wait.....</div>"
+}
+
+var title = document.getElementById('vimeoTitle').value;
+var byline = document.getElementById('vimeoByline').value;
+var portrait = document.getElementById('vimeoPortrait').value;
+var color = document.getElementById('vimeoColor').value;
+var autoplay = document.getElementById('vimeoAutoplay').value;
+var loop = document.getElementById('vimeoLoop').value;
+ 
+  if(title=="No"){
+  title = "0";
+  }else{
+  title = '1';
+  }
+  
+  if(byline=="No"){
+  byline = "0";
+  }else{
+  byline = '1';
+  }
+  
+  if(portrait=="No"){
+  portrait = "0";
+  }else{
+  portrait = '1';
+  }
+  
+  if(autoplay=="No"){
+  autoplay = "0";
+  }else{
+  autoplay = '1';
+  }
+  
+  if(loop=="No"){
+  loop = "0";
+  }else{
+  loop = '1';
+  }
+
+var video_embed = "<iframe src=\"http://player.vimeo.com/video/";
+    video_embed += video_id;
+	video_embed +="?title="+title+"&amp;byline="+byline+"&amp;portrait="+portrait+"&amp;color="+color+"&amp;autoplay="+autoplay+"&amp;loop="+loop+"";
+	video_embed += "\" width=\"400\" height=\"300\" frameborder=\"0\"></iframe>";
+document.getElementById('preview').innerHTML = video_embed;
+}
+</script>
+<style type="text/css">
+<!--
+body,td,th,input,select {
+	font-family: Arial;
+	font-size: 14px;
+}
+#preview{
+	background-image: url(img/vimeo_logo_header.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+-->
+</style>
+</head>
+<body>
+
+<h2 align="center">Vimeo Video Embed</h2>
+
+<div id="preview" style="width:400px;height:300px;margin:20px 0px 20px 0px;background-color:#000000;">
+
+</div>
+
+<p style="font-size:10px;"><button onclick="preview_video()"/>Preview Video</button> (Note: Video Preview in 400 x 300 format only.)</p>
+
+<form onsubmit="VimeoDialog.insert();return false;" action="#">
+
+<table width="400">
+  <tr>
+    <td height="15" colspan="2"> http://vimeo.com/
+    <input id="vimeoID" name="vimeoID" type="text" class="text" size="20" value="" /><span style="font-size:12px">*(enter video id here)</span></td>
+  </tr>
+  <tr>
+    <td height="45"> Width
+    <input id="vimeoWidth" name="vimeoWidth" type="text" class="text" size="5" value="400" />*</td>
+    <td height="45">Height
+    <input id="vimeoHeight" name="vimeoHeight" type="text" class="text" size="5" value="300" />*</td>
+  </tr>
+  <tr>
+    <td height="26">Show Portrait? </td>
+    <td height="26"> <select name="vimeoPortrait" id="vimeoPortrait" class="selectfont">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td height="26"> Show Byline?</td>
+    <td height="26"><select name="vimeoByline" id="vimeoByline" class="selectfont">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+  </select></td>
+  </tr>
+  <tr>
+    <td height="26"> Show Title?</td>
+    <td height="26"><select name="vimeoTitle" id="vimeoTitle" class="selectfont">
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select></td>
+  </tr>
+    <tr>
+    <td height="26"> Auto Play?</td>
+    <td height="26"><select name="vimeoAutoplay" id="vimeoAutoplay" class="selectfont">
+      <option value="No">No</option>
+      <option value="Yes">Yes</option>
+    </select></td>
+  </tr>
+      <tr>
+    <td height="26"> Auto Loop?</td>
+    <td height="26"><select name="vimeoLoop" id="vimeoLoop" class="selectfont">
+      <option value="No">No</option>
+      <option value="Yes">Yes</option>
+    </select></td>
+  </tr>
+  <tr>
+    <td height="26"> Select colour</td>
+    <td height="26"><select name="vimeoColor" id="vimeoColor" class="selectfont">
+      <option value="00adef">Blue</option>
+      <option value="ff9933">Orange</option>
+      <option value="c9ff23">Lime</option>
+      <option value="ff0179">Fuscia</option>
+      <option value="ffffff">White</option>
+  </select></td>
+  </tr>
+  <tr>
+    <td height="26"><input type="button" id="insert" name="insert" value="{#insert}" onclick="VimeoDialog.insert();"  /></td>
+    <td height="26"><input type="button" id="cancel" name="cancel" style="float:right;" value="{#cancel}" onclick="tinyMCEPopup.close();"  /></td>
+  </tr>
+   <tr>
+    <td height="30" colspan="2"><span style="font-size:12px;">* Denotes required fieids</span></td>
+   </tr>
+</table>
+</form>
+
+</body>
+</html>
