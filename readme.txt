@@ -1,5 +1,6 @@
 === vimeo quicktag ===
 Contributors: denzel_chia
+Donate link: http://denzeldesigns.com
 Author link: http://denzeldesigns.com
 Tags:vimeo-quicktag, vimeo, quicktag, embed video, embed vimeo video
 Requires at least: 2.6
