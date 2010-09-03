@@ -5,8 +5,8 @@
 			ed.addCommand('mceVimeo', function() {
 				ed.windowManager.open({
 					file : url + '/dialog.htm',
-					width : 260 + parseInt(ed.getLang('vimeo.delta_width', 0)),
-					height : 320 + parseInt(ed.getLang('vimeo.delta_height', 0)),
+					width : 415 + parseInt(ed.getLang('vimeo.delta_width', 0)),
+					height : 780 + parseInt(ed.getLang('vimeo.delta_height', 0)),
 					inline : 1
 				}, {
 					plugin_url : url, // Plugin absolute URL

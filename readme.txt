@@ -1,23 +1,32 @@
 === vimeo quicktag ===
 Contributors: denzel_chia
-Donate link: http://denzeldesigns.com/2008/12/vimeo-quicktags/
+Author link: http://denzeldesigns.com
 Tags:vimeo-quicktag, vimeo, quicktag, embed video, embed vimeo video
-Requires at least:2.6
-Tested up to: 2.9.2
-Stable tag:1.2
+Requires at least: 2.6
+Tested up to: 3.0.1
+Stable tag:2.0
 
 == Description ==
 
-Enable administrator to embed vimeo video into blog. Options available are the same as provided by vimeo.
+Allows Vimeo video embed to be viewed in iPad, iPhone, and iPod Touch.
+This plugin interprets its vimeo shortcode to produce a vimeo iframe embed code.
+This iframe wil pull in javascript from vimeo to determine browser type, 
+and display video in the supported format.
 
 == Changelog ==
 
-=1.2=
+= 2.0 =
 
-*Changed plugin path to defined WP_PLUGINS_URL
+1. Rewrited plugin to produce Vimeo iframe embed code.
+2. Plugin inserts vimeo video shortcode, instead of flash embed code.
+3. Plugin interprets vimeo shortcode, into Vimeo iframe embed code.
+4. Added preview video feature. 
 
-*Added White Colour
+= 1.2 =
 
+1. Changed plugin path to defined WP_PLUGINS_URL
+
+2. Added White Colour.
 
 == Installation ==
 
