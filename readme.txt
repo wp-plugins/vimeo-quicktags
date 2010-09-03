@@ -9,9 +9,7 @@ Stable tag:2.0
 == Description ==
 
 Allows Vimeo video embed to be viewed in iPad, iPhone, and iPod Touch.
-This plugin interprets its vimeo shortcode to produce a vimeo iframe embed code.
-This iframe wil pull in javascript from vimeo to determine browser type, 
-and display video in the supported format.
+This plugin interprets its vimeo shortcode to produce the latest vimeo iframe embed code.
 
 == Changelog ==
 
