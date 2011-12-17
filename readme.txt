@@ -4,7 +4,7 @@ Donate link: http://denzeldesigns.com
 Author link: http://denzeldesigns.com
 Tags:vimeo-quicktag, vimeo, quicktag, embed video, embed vimeo video
 Requires at least: 2.6
-Tested up to: 3.2
+Tested up to: 3.3
 Stable tag:2.0
 
 == Description ==
